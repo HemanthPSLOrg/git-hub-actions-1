@@ -1,0 +1,12 @@
+name: Post welcome comment
+on: workflow_dispatch
+env:
+  A1 : Hemanth
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkout@v4
+      - name : trails
+        run : echo Hello $A1
+  

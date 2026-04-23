@@ -1,12 +1,11 @@
-name: Post welcome comment
+name: Workflow Env Example
 on: workflow_dispatch
 env:
-  A1 : Hemanth
+  DAY_OF_WEEK: Monday
+
 jobs:
-  build:
+  greet:
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout@v4
-      - name : trails
-        run : echo Hello $A1
-  
+    - name: Say Hello
+      run: echo "Today is $DAY_OF_WEEK"
